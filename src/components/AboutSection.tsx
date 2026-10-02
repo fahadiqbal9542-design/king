@@ -1,6 +1,7 @@
 import React from 'react';
 import { KEY_STATS, FACULTY_MEMBERS } from '../data/academyData';
-import { ShieldCheck, Award, Users, Building2, Briefcase, GraduationCap } from 'lucide-react';
+import { ShieldCheck, Award, Users, Building2, Briefcase, GraduationCap, Presentation } from 'lucide-react';
+import studentDemoImg from '../assets/images/student_demo_showcase_1790338126962.jpg';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -35,33 +36,54 @@ export const AboutSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Institutional Stats Panel */}
-          <div className="lg:col-span-5 bg-gradient-to-br from-[#0b1a30] to-[#122e54] text-white rounded-3xl p-8 shadow-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
-            
-            <h3 className="text-xl font-bold tracking-tight text-white font-display mb-6">
-              Audited Student Outcomes
-            </h3>
-
-            <div className="grid grid-cols-2 gap-6">
-              {KEY_STATS.map((stat, idx) => (
-                <div key={idx} className="border-b border-slate-700/60 pb-4">
-                  <div className="text-3xl sm:text-4xl font-black text-[#00d2ff] font-display">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs font-bold text-slate-200 mt-1">
-                    {stat.label}
-                  </div>
-                  <div className="text-[11px] text-slate-400 mt-0.5">
-                    {stat.subtext}
-                  </div>
+          {/* Institutional Showcase & Stats Panel */}
+          <div className="lg:col-span-5 space-y-6">
+            {/* Student Capstone Demo Photo Banner */}
+            <div className="relative rounded-3xl overflow-hidden shadow-lg border border-slate-200 group">
+              <img
+                src={studentDemoImg}
+                alt="Web Developer Academy student presenting capstone demo to mentors"
+                referrerPolicy="no-referrer"
+                className="w-full h-52 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0b1a30]/85 via-transparent to-transparent flex items-end p-4">
+                <div className="text-white text-xs">
+                  <span className="font-bold flex items-center gap-1.5 text-cyan-300">
+                    <Presentation className="w-3.5 h-3.5" />
+                    Bi-Weekly Demo Days & Industry Juries
+                  </span>
+                  <p className="text-[11px] text-slate-200 mt-0.5">Students ship live software to engineering leaders</p>
                 </div>
-              ))}
+              </div>
             </div>
 
-            <p className="text-[11px] text-slate-400 mt-4 leading-normal">
-              * Verified by third-party accounting and career outcomes auditor for the 2024-2025 academic graduating cohorts.
-            </p>
+            <div className="bg-gradient-to-br from-[#0b1a30] to-[#122e54] text-white rounded-3xl p-6 sm:p-7 shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+              
+              <h3 className="text-lg font-bold tracking-tight text-white font-display mb-4">
+                Audited Student Outcomes
+              </h3>
+
+              <div className="grid grid-cols-2 gap-4">
+                {KEY_STATS.map((stat, idx) => (
+                  <div key={idx} className="border-b border-slate-700/60 pb-3">
+                    <div className="text-2xl sm:text-3xl font-black text-[#00d2ff] font-display">
+                      {stat.value}
+                    </div>
+                    <div className="text-xs font-bold text-slate-200 mt-0.5">
+                      {stat.label}
+                    </div>
+                    <div className="text-[10px] text-slate-400 mt-0.5">
+                      {stat.subtext}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-[10px] text-slate-400 mt-3 leading-normal">
+                * Verified by third-party accounting and career outcomes auditor for the 2024-2025 academic graduating cohorts.
+              </p>
+            </div>
           </div>
         </div>
 

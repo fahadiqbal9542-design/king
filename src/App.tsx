@@ -15,6 +15,7 @@ import { AlumniOutcomes } from './components/AlumniOutcomes';
 import { NewsAndEvents } from './components/NewsAndEvents';
 import { TuitionFaqSection } from './components/TuitionFaqSection';
 import { ContactSection } from './components/ContactSection';
+import { CeoLeadershipForm } from './components/CeoLeadershipForm';
 import { SkillsSection } from './components/SkillsSection';
 import { ScrollToTop } from './components/ScrollToTop';
 import { Footer } from './components/Footer';
@@ -67,7 +68,7 @@ export default function App() {
   // Scroll spy for active navbar highlighting
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'programs', 'skills', 'about', 'admissions', 'campus-life', 'news', 'contact'];
+      const sections = ['home', 'programs', 'skills', 'about', 'ceo-leadership', 'admissions', 'campus-life', 'news', 'contact'];
       const scrollPos = window.scrollY + 120;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -128,7 +129,10 @@ export default function App() {
         {/* 6. About the Academy & Faculty */}
         <AboutSection />
 
-        {/* 7. Campus Life & Facilities Tour */}
+        {/* 7. Executive Leadership & Direct CEO Advisory Form with CEO Portrait */}
+        <CeoLeadershipForm />
+
+        {/* 8. Campus Life & Facilities Tour */}
         <CampusLifeSection />
 
         {/* 8. Admissions & Application Flow */}

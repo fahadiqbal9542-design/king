@@ -113,6 +113,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenApply }) => {
                 </button>
               </li>
               <li>
+                <button onClick={() => onNavigate('ceo-leadership')} className="hover:text-cyan-400 transition cursor-pointer">
+                  Direct CEO Advisory & Mentorship
+                </button>
+              </li>
+              <li>
                 <button onClick={() => onNavigate('admissions')} className="hover:text-cyan-400 transition cursor-pointer">
                   Admission Requirements
                 </button>
