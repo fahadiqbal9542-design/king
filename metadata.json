@@ -1,0 +1,6 @@
+{
+  "name": "Web Developer Academy",
+  "description": "Modern Education For A Bright Future. Premier institution for Software Engineering, Data Science, and Digital Design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
